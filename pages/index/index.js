@@ -9,23 +9,23 @@ Page({
     }
   },
   data: {
-    imgUrls: [
-      app.globalData.domain + '/banner/1.jpg',
-      app.globalData.domain + '/banner/2.jpg',
-      app.globalData.domain + '/banner/3.jpg'
-    ],
+    banners: [],
+    logo: '',
+    body_bg: app.globalData.domain + '/banner/bg.jpg',
+    icon: app.globalData.domain + '/banner/icon.png',
     indicatorDots: true, //小点
     autoplay: true, //自动播放
     interval: 2000, //播放间隔 ms
     duration: 500,
     notices: [],
     lists: [],
-    reminds: [{
-        'name': '',
-      }
-    ],
-    remind_img: '',
-    test: ''
+    fashion_left: '',
+    fashion_right: [{
+      'title': '',
+      'pic': ''
+    }],
+    fashion_banner: [],
+    test: '',
 
   },
   catchTouchMove: function (res) {
@@ -99,10 +99,15 @@ Page({
       success(res) {
         var response = res.data.response;
         that.setData({
-          remind_img: response.remind_img,
+          notices :response.notices,
+          body_bg: response.body_bg,
+          icon: response.icon,
+          banners: response.banners,
+          logo: response.logo,
           lists: response.lists,
-          notices: response.notices,
-          reminds: response.reminds
+          fashion_left: response.fashion_left,
+          fashion_right: response.fashion_right,
+          fashion_banner: response.fashion_banner,
         }) //和页面进行绑定可以动态的渲染到页面
       }
     })

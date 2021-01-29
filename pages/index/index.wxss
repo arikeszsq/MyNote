@@ -1,12 +1,8 @@
 .body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background-color: rgb(218, 244, 245);
   padding-bottom: 15rpx;
-}
-
-.slide-image {
-  height: 180px;
-  width: 100%;
 }
 
 .lead_new {
@@ -14,7 +10,7 @@
   width: 100%;
 }
 
-.new_list{
+.new_list {
   justify-content: center;
   align-items: center;
 }
@@ -24,10 +20,8 @@
   justify-content: center;
   align-items: center;
   height: 50rpx;
-  margin: 10rpx 20rpx;
-  border-radius: 30rpx;
-  background: #f5f5f5;
-  margin-top: -20px;
+  margin: 2rpx 0rpx;
+  background: #eeeeee;
 }
 
 .broadcastList {
@@ -71,27 +65,134 @@
 }
 
 
-.leader{
+.leader {
   text-align: center;
 }
-.leader .leader_left{
- height: 50px;
- background-color: rgb(66, 118, 196);
+
+.leader .leader_left {
+  height: 50px;
+  background-color: rgb(66, 118, 196);
 }
-.leader_right{
+
+.leader_right {
   height: 50px;
   background-color: rgb(0, 217, 255);
 }
 
-.notice{
+.notice {
   margin-top: 12px;
 }
 
-.notice .notice_left{
+.notice .notice_left {
   margin-left: 18px;
   padding-left: 5px;
   height: 200px;
 }
-.recomand{
+
+.recomand {
   border: 1px greenyellow solid;
 }
+
+.logo {
+  height: 62px;
+}
+
+.logo_img {
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin-top: 29px;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.logo_title {
+  float: left;
+  margin-top: 33px;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+.banner,
+.slide-image {
+  height: 180px;
+  width: 100%;
+}
+
+.float_l {
+  float: left;
+}
+
+.pic_nav {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 200px;
+  background-color: white;
+}
+
+.nav_left {
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.nav_left .img {
+  width: 98%;
+}
+
+.nav_right .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.nav_right .leader {
+  margin-left:5px;
+  height: 33px;
+  line-height: 33px;
+}
+
+.nav_right .title {
+  max-width: 130px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  margin-left: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  color: yellowgreen;
+}
+
+/*首页跑马灯效果*/
+.example {
+  display: block;
+  width: 100%;
+  height: 70rpx;
+  background-color: #f2f2f2;
+  line-height: 70rpx;
+ }
+  
+ .marquee_box {
+  width: 100%;
+  position: relative;
+ }
+  
+ .marquee_text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+ }
+  
+ .ad-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-top: 15rpx;
+ }
+ /*首页跑马灯效果*/

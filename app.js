@@ -86,9 +86,10 @@ App({
       }
     })
   },
+
   globalData: {
     userInfo: null,
-    domain: "https://zhusq.top"
-    // domain: "http://zhusq.local"
+    // domain: "https://zhusq.top"
+    domain: "http://zhusq.local"
   }
 })
