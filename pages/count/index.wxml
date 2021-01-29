@@ -1,0 +1,33 @@
+	<view class="weather_wrapper" bindtap="toIndex"></view>
+	<view>
+		<view class="cu-bar bg-white solid-bottom">
+			<view class="action">
+				<text class="cuIcon-title text-orange"></text> 统计
+			</view>
+		</view>
+
+      <view class="cu-bar bg-white  margin-top solid-bottom" wx:for="{{list}}" wx:key="index">
+				<view class="action">
+					<text class="cuIcon-title text-blue"></text>{{item.name}}
+				</view>
+				<view class="action">
+				{{item.value}}
+				</view>
+			</view>
+	
+
+	</view>
+
+		<view class="box">
+		<view class="cu-bar tabbar margin-bottom-xl bg-white">
+			<view class="action text-orange" bindtap="toIndex">
+				<view class="cuIcon-homefill"></view> 首页
+			</view>
+			<!-- <view class="action text-gray">
+				<view class="cuIcon-my">
+					<view class="cu-tag badge"></view>
+				</view>
+				个人中心
+			</view> -->
+		</view>
+	</view>

@@ -1,0 +1,48 @@
+<view class="weather_wrapper" bindtap="toIndex"></view>
+
+<form bindsubmit='formSubmit'>
+	<view class="cu-form-group">
+		<view class="title">数字</view>
+		<input placeholder="金额" name="num"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">备注</view>
+		<input placeholder="备注" name="backup"></input>
+		<text class='text-orange'></text>
+	</view>
+	<button form-type='submit' class="bg-red margin-tb-sm">保存</button>
+</form>
+
+<view>
+	<view class="cu-list menu-avatar">
+
+		<view class="cu-item"wx:for="{{lists}}" wx:key='index'>
+				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+			<view class="content">
+				<view class="text-pink">
+					<view class="text-cut">{{item.num}}</view>
+				</view>
+				<view class="text-gray text-sm flex">
+					<view class="text-cut">{{item.create_time}}{{item.content}}</view>
+				</view>
+			</view>
+			<view class="action">
+				<view class="text-grey text-xs btn_delete" bindtap="deleteList" data-productid="{{item.id}}">删除</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+	<view class="box">
+		<view class="cu-bar tabbar margin-bottom-xl bg-white">
+			<view class="action text-orange" bindtap="toIndex">
+				<view class="cuIcon-homefill"></view> 首页
+			</view>
+			<!-- <view class="action text-gray">
+				<view class="cuIcon-my">
+					<view class="cu-tag badge"></view>
+				</view>
+				个人中心
+			</view> -->
+		</view>
+	</view>

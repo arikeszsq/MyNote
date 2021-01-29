@@ -1,0 +1,163 @@
+<view class="body">
+	<view class="banner">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+			<block wx:for="{{imgUrls}}" wx:key="key">
+				<swiper-item>
+					<navigator url="{{item}}" hover-class="navigator-hover">
+						<image src="{{item}}" class="slide-image" />
+					</navigator>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="lead_new">
+		<view class="flex p-xs margin-bottom-sm mb-sm">
+			<view class="flex-twice  padding-sm margin-xs radius">
+				<view class="cu-avatar xl round margin-left" id="count" style="background-image:url(https://zhusq.top/btn/3.jpg);" bindtap="gotoCount">
+					计
+				</view>
+			</view>
+			<view class="flex-twice  padding-sm margin-xs radius">
+				<view class="cu-avatar xl round margin-left" id="income" style="background-image:url(https://zhusq.top/btn/8.jpg);" bindtap="gotoPage">
+					入
+				</view>
+			</view>
+			<view class="flex-twice  padding-sm margin-xs radius">
+				<view class="cu-avatar xl round margin-left" id="consume" style="background-image:url(https://zhusq.top/btn/9.jpg);" bindtap="gotoPage">
+					出
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="broadcastbox">
+		<swiper class="broadcastList" vertical="true" autoplay="true" circular="true" interval="4000">
+			<block wx:for="{{notices}}" wx:key='index'>
+				<swiper-item>
+					<view class='broadcastListInde'>
+						<view class="broadcastheadimgurl">
+							<image class='broadcastbannerImg' src="https://sucai.suoluomei.cn/sucai_zs/images/20200509144507-broadcast%402x.png"></image>
+						</view>
+						<view class='broadcastheaderName'>{{item.title}}</view>
+						<view>|　</view>
+						<view class='broadcastContent'>{{item.description}}</view>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="cu-list grid col-4 no-border">
+		<view class="cu-item">
+			<view class="cuIcon-creative text-red" id="xingzuo" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="xingzuo" bindtap="gotoPage">星座</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-circlefill  text-red"  id="qiyun" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="qiyun" bindtap="gotoPage">运势</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-discoverfill  text-red"  id="meet" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="meet" bindtap="gotoPage">心缘</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-cardboardfill text-red"  id="plan" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="plan" bindtap="gotoPage">计划</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-people  text-red"  id="remind" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="remind" bindtap="gotoPage">提醒</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-moneybag  text-red"  id="study" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="study" bindtap="gotoPage">学习</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-evaluate_fill  text-red"  id="note" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="note" bindtap="gotoPage">笔记</text>
+		</view>
+
+		<view class="cu-item">
+			<view class="cuIcon-apps text-red"  id="more" bindtap="gotoPage">
+				<view class="cu-tag ">
+				</view>
+			</view>
+			<text id="more" bindtap="gotoPage">更多+</text>
+		</view>
+
+
+	</view>
+
+	<view class="cu-bar bg-white solid-bottom">
+		<view class="action">
+			<text class="cuIcon-title text-orange"></text> 提醒事项
+		</view>
+	</view>
+	<view class="notice">
+		<view class="flex p-xs mb-sm margin-left-sm">
+			<view class="flex-twice margin-bottom-sm">
+				<view class="notice_left" style="background-image:url({{remind_img}})">
+				</view>
+			</view>
+			<view class="flex-twice flex flex-wrap ">
+				<view class="basis-xl bg-white  margin-left-sm margin-bottom-sm padding-sm radius cuIcon-title text-blue" wx:for="{{reminds}}" wx-for-index="index" wx-for-item="item">{{item.title}}
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="cu-bar bg-white solid-bottom">
+		<view class="action">
+			<text class="cuIcon-title text-orange"></text> 精选
+		</view>
+	</view>
+
+	<view class="cu-list menu-avatar">
+
+		<view class="cu-item recomand" wx:for="{{lists}}" wx:key='index'>
+			<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+			<view class="content" bindtap="toDetail" data-productId="{{item.id}}">
+				<view class="text-grey">{{item.title}}</view>
+				<view class="text-gray text-sm flex">
+					<view class="text-cut">
+						<text class="cuIcon-infofill text-red  margin-right-xs"></text>
+						{{item.description}}
+					</view>
+				</view>
+			</view>
+			<view class="action">
+				<view class="text-grey text-xs">{{item.month}}</view>
+				<view class="cu-tag round bg-grey sm">{{item.click_num}}</view>
+			</view>
+		</view>
+	</view>
+
+</view>

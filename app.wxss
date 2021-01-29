@@ -1,0 +1,26 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.return_back {
+  height: 76px;
+  margin-top: 26px;
+}
+/*CSS代码*/
+
+.weather_wrapper{
+  min-height: 200rpx;
+  background-image: url(https://zhusq.top/banners/1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";

@@ -1,0 +1,43 @@
+	<view class="weather_wrapper" bindtap="toIndex"></view>
+	<view>
+		<view class="cu-bar bg-white solid-bottom">
+			<view class="action">
+				<text class="cuIcon-title text-orange"></text> 列表
+			</view>
+		</view>
+		<view class="cu-list menu-avatar">
+
+
+			<view class="cu-item" wx:for="{{lists}}" wx:key='index'>
+				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+				<view class="content" bindtap="toDetail" data-productId="{{item.id}}">
+					<view class="text-pink">
+						<view class="text-cut">{{item.title}}</view>
+					</view>
+					<view class="text-gray text-sm flex">
+						<view class="text-cut">{{item.description}}</view>
+					</view>
+				</view>
+				<view class="action">
+					<view class="text-grey text-xs">{{item.month}}</view>
+					<view class="cu-tag round bg-red sm">{{item.click_num}}</view>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+
+	<view class="box">
+		<view class="cu-bar tabbar margin-bottom-xl bg-white">
+			<view class="action text-orange" bindtap="toIndex">
+				<view class="cuIcon-homefill"></view> 首页
+			</view>
+			<!-- <view class="action text-gray">
+				<view class="cuIcon-my">
+					<view class="cu-tag badge"></view>
+				</view>
+				个人中心
+			</view> -->
+		</view>
+	</view>

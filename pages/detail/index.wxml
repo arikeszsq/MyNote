@@ -1,0 +1,26 @@
+<view class="weather_wrapper" bindtap="toIndex"></view>
+	<view class="bg-white padding-lr">
+		<view class="solids-bottom padding-xs flex align-center">
+			<view class="flex-sub text-center">
+				<view class="solid-bottom text-xl padding">
+					<text class="text-black text-bold">{{title}}</text>
+					<text class="text-black text-bold">{{created_at}}</text>
+				</view>
+				<view class="padding">{{content}}</view>
+			</view>
+		</view>
+	</view>
+
+		<view class="box">
+		<view class="cu-bar tabbar margin-bottom-xl bg-white">
+			<view class="action text-orange" bindtap="toIndex">
+				<view class="cuIcon-homefill"></view> 首页
+			</view>
+			<!-- <view class="action text-gray">
+				<view class="cuIcon-my">
+					<view class="cu-tag badge"></view>
+				</view>
+				个人中心
+			</view> -->
+		</view>
+	</view>
